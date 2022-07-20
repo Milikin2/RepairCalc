@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Главная</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20220720175730">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap&_v=20220720175730" rel="stylesheet">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+			</div>
+		</header>
+		<main class="page calc calc__container">
+			<h1 class="calc__title">Калькулятор стоимости расчёта ремонта</h1>
+			<h2 class="calc__subTitle">Базовая цена: 1 м<sup>2</sup> = 6 тыс. рублей</h2>
+			<div class="calc__body body-calc">
+				<div class="body-calc__area body-area">
+					<h2 class="body-calc__title body-area__title">Площадь квартиры: </h2>
+					<input step="1" min="20" max="200" value="50" type="number" class="body-area__numInput">
+					<h2 class="body-area__meters">М<sup>2</sup></h2>
+					<input step="1" min="20" max="200" value="50" type="range" class="body-area__rangeInput">
+				</div>
+				<div class="body-calc__type body-type">
+					<h2 class="body-calc__title body-type__title">Тип ремонта</h2>
+					<label class="body-type__group label-group">
+						<input checked type="radio" name="type" class="body-type__type" value="1">
+						<h3 class="body-type__typeTitle additional__title">Косметический</h3>
+					</label>
+					<label class="body-type__group label-group">
+						<input type="radio" name="type" class="body-type__type" value="1.3">
+						<h3 class="body-type__typeTitle additional__title">Капитальный</h3>
+						<h4 class="body-type__addCost additional__cost">+30% к стоимости</h4>
+					</label>
+					<label class="body-type__group label-group">
+						<input type="radio" name="type" class="body-type__type" value="1.5">
+						<h3 class="body-type__typeTitle additional__title">Под ключ</h3>
+						<h4 class="body-type__addCost additional__cost">+50% к стоимости</h4>
+					</label>
+				</div>
+				<div class="body-calc__house body-house">
+					<h2 class="body-calc__title body-house__title">Тип дома</h2>
+					<label class="body-house__group label-group">
+						<input checked type="radio" name="type__house" class="body-house__type" value="1">
+						<h3 class="body-house__typeTitle additional__title">Новостройка</h3>
+					</label>
+					<label class="body-house__group label-group">
+						<input type="radio" name="type__house" class="body-house__type" value="1.1">
+						<h3 class="body-house__typeTitle additional__title">Вторичка</h3>
+						<h4 class="body-house__addCost additional__cost">+10% к стоимости</h4>
+					</label>
+				</div>
+				<div class="body-calc__rooms body-rooms">
+					<h2 class="body-calc__title body-rooms__title">Количество комнат</h2>
+					<div class="body-rooms__list">
+						<label class="body-rooms__group">
+							<input type="radio" name="rooms" class="body-rooms__realInput" value="1">
+							<div class="body-rooms__fakeInput">С</div>
+						</label>
+						<label class="body-rooms__group">
+							<input checked type="radio" name="rooms" class="body-rooms__realInput" value="1">
+							<div class="body-rooms__fakeInput">1</div>
+						</label>
+						<label class="body-rooms__group">
+							<input type="radio" name="rooms" class="body-rooms__realInput" value="1.2">
+							<div class="body-rooms__fakeInput">2</div>
+						</label>
+						<label class="body-rooms__group">
+							<input type="radio" name="rooms" class="body-rooms__realInput" value="1.2">
+							<div class="body-rooms__fakeInput">3</div>
+						</label>
+						<label class="body-rooms__group">
+							<input type="radio" name="rooms" class="body-rooms__realInput" value="1.4">
+							<span class="body-rooms__fakeInput">4</span>
+						</label>
+						<label class="body-rooms__group">
+							<input type="radio" name="rooms" class="body-rooms__realInput" value="1.4">
+							<div class="body-rooms__fakeInput">5</div>
+						</label>
+					</div>
+				</div>
+				<div class="body-calc__additional body-additional">
+					<h2 class="body-calc__title body-additional__title">Дополнительные опции</h2>
+					<label class="body-additional__group label-group">
+						<input checked type="checkbox" name="type" class="body-additional__type" value="1.1">
+						<h3 class="body-additional__typeTitle additional__title">Натяжные потолки</h3>
+						<h4 class="body-additional__addCost additional__cost">+10% к стоимости</h4>
+					</label>
+					<label class="body-additional__group label-group">
+						<input type="checkbox" name="type" class="body-additional__type" value="1.1">
+						<h3 class="body-additional__typeTitle additional__title">Покраска стен</h3>
+						<h4 class="body-additional__addCost additional__cost">+10% к стоимости</h4>
+					</label>
+					<label class="body-additional__group label-group">
+						<input type="checkbox" name="type" class="body-additional__type" value="1.1">
+						<h3 class="body-additional__typeTitle additional__title">Теплый пол</h3>
+						<h4 class="body-additional__addCost additional__cost">+10% к стоимости</h4>
+					</label>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__body">
+				<div class="footer__container">
+					<div class="footer__info">
+						<h2 class="body-calc__title footer__title">Стоимость ремонта: </h2>
+						<h3 class="footer__price">0</h3>
+					</div>
+					<button data-popup="#makeRequest" type="button" class="footer__accept">Оформить заявку</button>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<div id="makeRequest" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<h2 class="popup__title">Оставить заявку на ремонт</h2>
+				<div class="popup__form">
+					<form data-dev action="#" method="POST" id="form-popup" class="popup__form-body">
+						<div class="popup__form-item">
+							<label for="formName" class="popup__form-label">Имя*:</label>
+							<input data-error="Введите только русские буквы" data-required="fio" placeholder="Ваше имя" type="text" id="formName" name="userName" class="popup__form-userName popup-input">
+						</div>
+						<div class="popup__form-item">
+							<label for="formLastname" class="popup__form-label">Фамилия*:</label>
+							<input data-error="Введите только русские буквы" data-required="fio" placeholder="Ваша фамилия" type="text" id="formLastname" name="form[]" class="popup__form-userLastname popup-input">
+						</div>
+						<div class="popup__form-item">
+							<label for="formEmail" class="popup__form-label">E-mail*:</label>
+							<input data-error="Введите Вашу почту" data-validate data-required="email" placeholder="Ваша почта" type="text" id="formEmail" name="userEmail" class="popup__form-userEmail popup-input">
+						</div>
+						<div class="popup__form-item">
+							<label for="formPhone" class="popup__form-label">Телефон*:</label>
+							<input data-error="Введите номер телефона" data-validate data-required="tel" placeholder="+7 (***) ***-**-**" type="text" id="formPhone" name="userPhone" class="popup__form-userPhone popup-input">
+						</div>
+						<h2 class="popup-cost__title popup__title">
+							Итоговая стоимость: <span class="popup-total__cost"></span>
+						</h2>
+						<div class="popup-form__item popup-check">
+							<div class="popup-form__checkbox">
+								<input data-required id="popup-form__agreement" name="agreement" type="checkbox" class="popup-form__agreement">
+								<label for="popup-form__agreement" class="popup-form__label">
+									<span>
+										Я даю свое согласие на обработку персональных данных в соответствии с <a href="#">Условиями</a>*
+									</span>
+								</label>
+							</div>
+							<button type="submit" class="popup-accept__button">Отправить заявку</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20220720175730"></script>
+</body>
+
+</html>
